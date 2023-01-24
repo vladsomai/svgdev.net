@@ -14,22 +14,22 @@
 		textTransition = true;
 	});
 
-	const setLogoSize = () => {
+	const setLogoSize = (currentWidth = windowWidth) => {
 		if (windowWidth > 1536) {
-			logoSize = windowWidth * 0.25;
-		} else if (windowWidth > 1280) {
-			logoSize = windowWidth * 0.34;
-		} else if (windowWidth > 1024) {
 			logoSize = windowWidth * 0.35;
+		} else if (windowWidth > 1280) {
+			logoSize = windowWidth * 0.25;
+		} else if (windowWidth > 1024) {
+			logoSize = windowWidth * 0.3;
 		} else if (windowWidth > 768) {
 			logoSize = windowWidth * 0.39;
 		} else if (windowWidth > 640) {
-			logoSize = windowWidth * 0.41;
+			logoSize = windowWidth * 0.5;
 		} else {
-			logoSize = windowWidth * 5.8;
+			logoSize = windowWidth * 0.6;
 		}
 	};
-	$: setLogoSize();
+	$: setLogoSize(windowWidth);
 
 	function typewriter(node: HTMLParagraphElement, { speed = 1 }) {
 		const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
@@ -62,9 +62,7 @@
 	<div
 		class="flex flex-col justify-center items-center w-screen h-screen bg-[#0f0531] overflow-auto"
 	>
-		<div
-			class="text-blue-300 text-center w-full h-full flex flex-col justify-start items-center"
-		>
+		<div class="text-blue-300 text-center w-full h-full flex flex-col justify-start items-center">
 			<div class={`w-[${logoSize}] h-[${logoSize}]`}>
 				{#if logoTransition}
 					<img
@@ -92,7 +90,7 @@
 							textTransition = textTransition;
 						}, 4000)}
 					on:outroend={() => (textTransition = textTransition)}
-					class="logoText text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mt-32"
+					class="logoText text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mt-32"
 				>
 					create. design. code. build.
 				</p>
