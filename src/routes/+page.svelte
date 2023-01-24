@@ -55,7 +55,7 @@
 <svelte:window bind:innerWidth={windowWidth} />
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="SvgDev Website" />
+	<meta name="description" content="svgdev home page" />
 </svelte:head>
 
 <section>
@@ -63,7 +63,7 @@
 		class="flex flex-col justify-center items-center w-screen h-screen bg-[#0f0531] overflow-auto"
 	>
 		<div
-			class="text-blue-300 text-center w-full h-full flex flex-col justify-center sm:justify-start items-center"
+			class="text-blue-300 text-center w-full h-full flex flex-col justify-start items-center"
 		>
 			<div class={`w-[${logoSize}] h-[${logoSize}]`}>
 				{#if logoTransition}
