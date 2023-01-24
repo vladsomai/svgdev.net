@@ -1,8 +1,8 @@
 <script lang="ts">
-	import SvgLogo from '/src/lib/images/logo64.svg';
+	import SvgLogo from '$lib/images/logo64.svg';
 	import { fade } from 'svelte/transition';
 	import { scale } from 'svelte/transition';
-	import { backInOut, bounceIn, elasticInOut } from 'svelte/easing';
+	import { elasticInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	let windowWidth = 0;
 	let logoSize = 0;
@@ -56,7 +56,6 @@
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="SvgDev Website" />
-	<link href="/src/routes/output.css" rel="stylesheet" />
 </svelte:head>
 
 <section>
