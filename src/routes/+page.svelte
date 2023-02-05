@@ -16,7 +16,7 @@
 
 	const setLogoSize = (currentWidth = windowWidth) => {
 		if (windowWidth > 1536) {
-			logoSize = windowWidth * 0.35;
+			logoSize = windowWidth * 0.27;
 		} else if (windowWidth > 1280) {
 			logoSize = windowWidth * 0.25;
 		} else if (windowWidth > 1024) {
@@ -59,10 +59,8 @@
 </svelte:head>
 
 <section>
-	<div
-		class="flex flex-col justify-center items-center w-screen h-screen bg-[#0f0531] overflow-auto"
-	>
-		<div class="text-blue-300 text-center w-full h-full flex flex-col justify-start items-center">
+	<div class="flex flex-col justify-center items-center w-screen h-screen overflow-auto">
+		<div class="text-center w-full h-full flex flex-col justify-start items-center">
 			<div class={`w-[${logoSize}] h-[${logoSize}]`}>
 				{#if logoTransition}
 					<img
@@ -81,16 +79,17 @@
 					/>
 				{/if}
 			</div>
+			<p class="mt-24">Coming soon...</p>
 			{#if textTransition}
 				<p
 					in:typewriter
 					out:fade
 					on:introend={() =>
 						setTimeout(() => {
-							textTransition = textTransition;
+							textTransition = !textTransition;
 						}, 4000)}
-					on:outroend={() => (textTransition = textTransition)}
-					class="logoText text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mt-32"
+					on:outroend={() => (textTransition = !textTransition)}
+					class="logoText text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mt-10"
 				>
 					create. design. code. build.
 				</p>

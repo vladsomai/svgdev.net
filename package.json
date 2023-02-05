@@ -17,6 +17,7 @@
 		"@sveltejs/adapter-netlify": "^1.0.5",
 		"@sveltejs/kit": "^1.0.0",
 		"@types/cookie": "^0.5.1",
+		"@types/three": "^0.148.1",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",
@@ -33,6 +34,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"daisyui": "^2.47.0"
+		"babylonjs": "^5.44.0",
+		"daisyui": "^2.47.0",
+		"three": "^0.149.0",
+		"three-gltf-extensions": "^0.0.15"
 	}
 }

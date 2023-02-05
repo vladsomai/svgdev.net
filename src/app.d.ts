@@ -8,5 +8,8 @@ declare global {
 		// interface Platform {}
 	}
 }
-
-export {};
+declare module '$lib/3d-assets/*.glb' {
+	const src: string
+	export default src
+}
+export { };
