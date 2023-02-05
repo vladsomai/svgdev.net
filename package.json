@@ -35,6 +35,7 @@
 	"type": "module",
 	"dependencies": {
 		"babylonjs": "^5.44.0",
+		"babylonjs-loaders": "^5.45.0",
 		"daisyui": "^2.47.0",
 		"three": "^0.149.0",
 		"three-gltf-extensions": "^0.0.15"
