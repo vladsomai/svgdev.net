@@ -18,7 +18,7 @@
 			let light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0, 1, 0), scene);
 			light.intensity = 0.7;
 
-			BABYLON.SceneLoader.Append('../../src/lib/3d-assets/', 'Dragon.glb', scene, function (scene) {
+			BABYLON.SceneLoader.Append('/', 'Dragon.glb', scene, function (scene) {
 				// // Create a default arc rotate camera and light.
 				scene.createDefaultCameraOrLight(true, true, true);
 				//@ts-ignore
