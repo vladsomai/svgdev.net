@@ -54,8 +54,8 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="svgdev home page" />
+	<title>Home Page | Svg Development</title>
+	<meta name="description" content="Home Page | Svg Development" />
 </svelte:head>
 
 <section>
@@ -79,7 +79,6 @@
 					/>
 				{/if}
 			</div>
-			<p class="mt-24">Coming soon...</p>
 			{#if textTransition}
 				<p
 					in:typewriter
