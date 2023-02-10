@@ -65,7 +65,7 @@
 				{#if logoTransition}
 					<img
 						src={SvgLogo}
-						alt="svg logo"
+						alt="Svg Development Logo"
 						width={logoSize}
 						class="mx-auto object-scale-down"
 						transition:scale={{
